@@ -1,9 +1,20 @@
-export const PersonList = () => {
+import { FC } from "react";
+
+type PersonsListProps = {
+  names: {
+    first: string;
+    last: string;
+  }[];
+};
+
+export const PersonList: FC<PersonsListProps> = (props) => {
   return (
     <div>
-      <h2>Bruce Wayne</h2>
-      <h2>Clark Kent</h2>
-      <h2>Princess Diana</h2>
+      {props.names.map((name) => (
+        <h2 key={name.first}>
+          {name.first} {name.last}
+        </h2>
+      ))}
     </div>
   );
 };
