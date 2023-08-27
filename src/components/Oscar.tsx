@@ -5,5 +5,5 @@ type OscarProps = {
 };
 
 export const Oscar: FC<OscarProps> = (props) => {
-  return <div>Oscar goes to Leonardo Dicpario!</div>;
+  return <div>{props.children}</div>;
 };

@@ -1,11 +1,5 @@
 import { FC } from "react";
-
-type PersonProps = {
-  name: {
-    first: string;
-    second: string;
-  };
-};
+import { PersonProps } from "./Person.types";
 
 export const Person: FC<PersonProps> = (props) => {
   return (

@@ -4,6 +4,6 @@ type HeadingProps = {
   children: string;
 };
 
-export const Heading: FC<HeadingProps> = (props) => {
-  return <h2>Placeholder text</h2>;
+export const Heading: FC<HeadingProps> = ({ children }) => {
+  return <h2>{children}</h2>;
 };
