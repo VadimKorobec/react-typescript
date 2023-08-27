@@ -8,6 +8,8 @@ import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
+import { Box } from "./components/context/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { Counter } from "./components/state/Counter";
 
 function App() {
@@ -43,6 +45,9 @@ function App() {
         }}
       />
       <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
